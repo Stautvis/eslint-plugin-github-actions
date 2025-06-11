@@ -1,0 +1,9 @@
+{
+  "name": "eslint-plugin-github-actions",
+  "version": "0.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Tautvydas Steponavičius <t.steponavicius@icloud.com>",
+  "license": "ISC",
+  "description": ""
+}
