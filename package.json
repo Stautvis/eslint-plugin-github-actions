@@ -29,5 +29,14 @@
   "bugs": {
     "url": "https://github.com/Stautvis/eslint-plugin-github-actions/issues"
   },
+  "peerDependencies": {
+    "eslint": "^8.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "yaml-eslint-parser": "^1.2.0",
+    "@types/eslint": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
   "packageManager": "npm@10.9.2"
 }
