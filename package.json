@@ -1,9 +1,33 @@
 {
   "name": "eslint-plugin-github-actions",
   "version": "0.0.0",
-  "main": "index.js",
-  "keywords": [],
-  "author": "Tautvydas Steponavičius <t.steponavicius@icloud.com>",
-  "license": "ISC",
-  "description": ""
+  "description": "This ESLint plugin provides rules for linting GitHub Actions workflows.",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stautvis/eslint-plugin-github-actions"
+  },
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "lint",
+    "github",
+    "github-actions",
+    "github-actions-workflow",
+    "github-actions-lint"
+  ],
+  "author": {
+    "name": "Tautvydas Steponavičius",
+    "email": "t.steponavicius@icloud.com",
+    "url": "https://github.com/Stautvis"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Stautvis/eslint-plugin-github-actions/issues"
+  },
+  "packageManager": "npm@10.9.2"
 }
