@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-github-actions",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "This ESLint plugin provides rules for linting GitHub Actions workflows.",
   "main": "lib/index.js",
   "files": [
