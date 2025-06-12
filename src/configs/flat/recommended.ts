@@ -4,6 +4,21 @@ export default [
   ...base,
   {
     rules: {
+      "github-actions/order-workflow": [
+        "error",
+        {
+          order: [
+            "name",
+            "run-name",
+            "on",
+            "env",
+            "defaults",
+            "permissions",
+            "concurrency",
+            "jobs",
+          ],
+        },
+      ],
       "github-actions/require-workflow-name": "error",
       "github-actions/enforce-uses-version": ["error", { policy: "patch" }],
       "github-actions/require-step-name": "error",

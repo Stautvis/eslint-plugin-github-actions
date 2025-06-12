@@ -43,10 +43,12 @@ const rule: Rule.RuleModule = {
         type: "object",
         properties: {
           policy: {
+            type: "string",
             enum: ["commit", "patch", "minor", "major"],
           },
         },
         required: ["policy"],
+        additionalProperties: false,
       },
     ],
     messages: {
