@@ -31,6 +31,7 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
+    "commitlint": "commitlint --config configs/commitlint.config.ts",
     "prepare": "husky"
   },
   "peerDependencies": {
