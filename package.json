@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@types/eslint": "^9.6.1",
+    "@types/node": "^24.0.1",
     "eslint": "^9.28.0",
     "eslint-plugin-yml": "^1.18.0",
     "typescript": "^5.0.0",
