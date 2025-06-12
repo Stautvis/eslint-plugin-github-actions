@@ -1,8 +1,7 @@
-import type { Rule } from "eslint";
-import expressionSpacing from "./rules/expression-spacing";
-
-const rules: Rule.RuleModule[] = [expressionSpacing];
+import requireStepName from "./rules/require-step-name";
 
 export = {
-  rules,
+  rules: {
+    "require-step-name": requireStepName,
+  },
 };
