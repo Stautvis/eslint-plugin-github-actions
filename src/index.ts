@@ -1,3 +1,4 @@
+import requireWorkflowName from "./rules/require-workflow-name";
 import requireStepName from "./rules/require-step-name";
 import requireJobName from "./rules/require-job-name";
 import requireJobTimeout from "./rules/require-job-timeout";
@@ -13,6 +14,7 @@ export = {
     "flat/recommended": flatRecommended,
   },
   rules: {
+    "require-workflow-name": requireWorkflowName,
     "require-step-name": requireStepName,
     "require-job-name": requireJobName,
     "require-job-timeout": requireJobTimeout,

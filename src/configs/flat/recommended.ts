@@ -4,6 +4,7 @@ export default [
   ...base,
   {
     rules: {
+      "github-actions/require-workflow-name": "error",
       "github-actions/require-step-name": "error",
       "github-actions/require-job-name": "error",
       "github-actions/require-job-timeout": "error",
