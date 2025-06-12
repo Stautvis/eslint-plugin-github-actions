@@ -20,6 +20,12 @@ export default [
           style: "UPPER_CASE",
         },
       ],
+      "github-actions/enforce-output-key-naming": [
+        "error",
+        {
+          style: "kebab-case",
+        },
+      ],
     },
   },
 ] satisfies Linter.Config[];
