@@ -5,6 +5,7 @@ export default [
   {
     rules: {
       "github-actions/require-workflow-name": "error",
+      "github-actions/enforce-uses-version": ["error", { policy: "patch" }],
       "github-actions/require-step-name": "error",
       "github-actions/require-job-name": "error",
       "github-actions/require-job-timeout": "error",
