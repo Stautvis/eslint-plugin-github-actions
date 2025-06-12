@@ -6,6 +6,7 @@ export default [
     rules: {
       "github-actions/require-step-name": "error",
       "github-actions/require-job-name": "error",
+      "github-actions/require-job-timeout": "error",
       "github-actions/enforce-job-key-naming": [
         "error",
         {
