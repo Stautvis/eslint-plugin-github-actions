@@ -32,6 +32,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "commitlint": "commitlint --config configs/commitlint.config.ts",
+    "prettier": "prettier --config configs/prettier.config.cjs",
     "prepare": "husky"
   },
   "peerDependencies": {
