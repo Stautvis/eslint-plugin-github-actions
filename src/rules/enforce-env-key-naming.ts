@@ -13,7 +13,7 @@ const rule: Rule.RuleModule = {
   meta: {
     type: "suggestion",
     docs: {
-      description: "Enforce naming convention for GitHub Actions job keys",
+      description: "Enforce naming convention for environment variable keys",
     },
     fixable: undefined,
     schema: [
@@ -21,7 +21,7 @@ const rule: Rule.RuleModule = {
         type: "object",
         properties: {
           style: {
-            enum: ["kebab-case", "snake_case", "camelCase", "UPPER_CASE", "custom"],
+            enum: ["UPPER_CASE", "camelCase", "kebab-case", "snake_case", "custom"],
           },
           pattern: {
             type: "string",
@@ -31,28 +31,28 @@ const rule: Rule.RuleModule = {
       },
     ],
     messages: {
-      invalidJobName: "Job key '{{name}}' does not match the {{style}} naming convention.",
+      invalidKey: 'Environment variable key "{{name}}" does not match {{style}} style.',
     },
   },
 
   create(context) {
     const [options] = context.options as [Options];
-    const style: NamingStyle = options?.style || "kebab-case";
+    const style: NamingStyle = options?.style || "UPPER_CASE";
     const regex = getStyleRegex(style, options?.pattern);
 
     return {
       YAMLMapping(node: AST.YAMLMapping) {
-        const jobsMapping = getMappingValueByKey(node, "jobs");
-        if (!jobsMapping) return;
+        const envMapping = getMappingValueByKey(node, "env");
+        if (!envMapping) return;
 
-        for (const pair of jobsMapping.pairs) {
-          const jobKey = pair.key;
+        for (const pair of envMapping.pairs) {
+          const envKey = pair.key;
           if (
-            jobKey?.type === "YAMLScalar" &&
-            typeof jobKey.value === "string" &&
-            !regex.test(jobKey.value)
+            envKey?.type === "YAMLScalar" &&
+            typeof envKey.value === "string" &&
+            !regex.test(envKey.value)
           ) {
-            reportInvalidKey(context, jobKey, jobKey.value, style);
+            reportInvalidKey(context, envKey, envKey.value, style, "invalidKey");
           }
         }
       },
