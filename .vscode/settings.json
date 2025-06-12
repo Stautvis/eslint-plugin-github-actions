@@ -2,5 +2,7 @@
   // GitPrefix settings
   "gitPrefix.replacement": "( `${p1}: #${p2} `)",
   "gitPrefix.pattern": "^(.*)\\/(\\d+)-?.*$",
-  "gitPrefix.replacementIsFunction": true
+  "gitPrefix.replacementIsFunction": true,
+  // Prettier settings
+  "prettier.configPath": "configs/prettier.config.cjs"
 }
