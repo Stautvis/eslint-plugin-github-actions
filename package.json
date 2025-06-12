@@ -30,7 +30,8 @@
     "url": "https://github.com/Stautvis/eslint-plugin-github-actions/issues"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.build.json"
+    "build": "tsc -p tsconfig.build.json",
+    "prepare": "husky"
   },
   "peerDependencies": {
     "eslint": "^8.0.0"
